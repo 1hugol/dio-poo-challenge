@@ -1,34 +1,16 @@
 package br.com.dio.challenge.model;
 
-public class Course {
+public class Course extends Content{
 
-    private String title;
-    private String description;
     private int courseLoad;
 
     public Course() {
+        super();
     }
 
     public Course(String title, String description, int courseLoad) {
-        this.title = title;
-        this.description = description;
+        super(title, description);
         this.courseLoad = courseLoad;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public int getCourseLoad() {
@@ -40,10 +22,15 @@ public class Course {
     }
 
     @Override
+    public double calculateXp() {
+        return XP_PATTERN * courseLoad;
+    }
+
+    @Override
     public String toString() {
         return "Course{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
+                "title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", courseLoad=" + courseLoad +
                 '}';
     }
