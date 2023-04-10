@@ -1,4 +1,3 @@
-
 import br.com.dio.challenge.model.*;
 
 import java.time.LocalDate;
@@ -26,11 +25,9 @@ public class Main {
 
         System.out.println("------------");
 
-        System.out.println("Conteúdos Inscritos Hugo:" + devHugo.getSubscribedContents());
+        System.out.println("Conteúdos Pendentes Hugo:" + devHugo.getSubscribedContents());
         System.out.println("Conteúdos Concluídos Hugo:" + devHugo.getCompletedContent());
         System.out.println("XP do Dev: " + devHugo.getName() + " é igual a: " + devHugo.totalXpCalculate());
-
-
 
         System.out.println("------------");
 
@@ -43,7 +40,7 @@ public class Main {
 
         System.out.println("------------");
 
-        System.out.println("Conteúdos Inscritos Letícia:" + devLeticia.getSubscribedContents());
+        System.out.println("Conteúdos Pendentes Letícia:" + devLeticia.getSubscribedContents());
         System.out.println("Conteúdos Concluídos Letícia:" + devLeticia.getCompletedContent());
         System.out.println("XP do Dev: " + devLeticia.getName() + " é igual a: " + devLeticia.totalXpCalculate());
     }

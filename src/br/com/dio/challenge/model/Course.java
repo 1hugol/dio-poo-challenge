@@ -30,7 +30,6 @@ public class Course extends Content{
     public String toString() {
         return "Course{" +
                 "title='" + getTitle() + '\'' +
-                ", description='" + getDescription() + '\'' +
                 ", courseLoad=" + courseLoad +
                 '}';
     }

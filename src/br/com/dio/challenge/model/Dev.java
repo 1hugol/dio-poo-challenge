@@ -30,19 +30,10 @@ public class Dev {
     }
 
     public double totalXpCalculate() {
-        Iterator<Content> iterator = this.completedContent.iterator();
-        double sum = 0;
-        while(iterator.hasNext()){
-            double next = iterator.next().calculateXp();
-            sum += next;
-        }
-        return sum;
-
-        /*return this.completedContent
+        return this.completedContent
                 .stream()
                 .mapToDouble(Content::calculateXp)
-                .sum();*/
-
+                .sum();
     }
 
     public String getName() {

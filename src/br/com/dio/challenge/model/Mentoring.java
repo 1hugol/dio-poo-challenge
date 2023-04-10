@@ -32,7 +32,6 @@ public class Mentoring extends Content{
     public String toString() {
         return "Mentoring{" +
                 "title='" + getTitle() + '\'' +
-                ", description='" + getDescription() + '\'' +
                 ", dateMentoring=" + dateMentoring +
                 '}';
     }
