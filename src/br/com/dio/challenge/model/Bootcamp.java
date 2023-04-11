@@ -1,10 +1,7 @@
 package br.com.dio.challenge.model;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class Bootcamp {
 
@@ -58,6 +55,11 @@ public class Bootcamp {
 
     public void setContents(Set<Content> contents) {
         this.contents = contents;
+    }
+
+    public Set<Dev> getRanking() {
+        TreeSet<Dev> ranking = new TreeSet<>(subscribedDevs);
+        return ranking;
     }
 
     @Override

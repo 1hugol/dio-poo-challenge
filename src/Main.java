@@ -23,11 +23,9 @@ public class Main {
         devHugo.advance();
         devHugo.advance();
 
-        System.out.println("------------");
-
         System.out.println("Conteúdos Pendentes Hugo:" + devHugo.getSubscribedContents());
         System.out.println("Conteúdos Concluídos Hugo:" + devHugo.getCompletedContent());
-        System.out.println("XP do Dev: " + devHugo.getName() + " é igual a: " + devHugo.totalXpCalculate());
+        System.out.println("XP do Dev " + devHugo.getName() + " é igual a: " + devHugo.totalXpCalculate());
 
         System.out.println("------------");
 
@@ -36,12 +34,22 @@ public class Main {
         System.out.println("Conteúdos Inscritos Letícia:" + devLeticia.getSubscribedContents());
 
         devLeticia.advance();
-        devLeticia.advance();
-
-        System.out.println("------------");
 
         System.out.println("Conteúdos Pendentes Letícia:" + devLeticia.getSubscribedContents());
         System.out.println("Conteúdos Concluídos Letícia:" + devLeticia.getCompletedContent());
-        System.out.println("XP do Dev: " + devLeticia.getName() + " é igual a: " + devLeticia.totalXpCalculate());
+        System.out.println("XP do Dev " + devLeticia.getName() + " é igual a: " + devLeticia.totalXpCalculate());
+
+        Dev devAlan = new Dev("Alan");
+        devAlan.registerBootcamp(bootcampBackEnd);
+
+        Dev devBeth = new Dev("Beth");
+        devBeth.registerBootcamp(bootcampBackEnd);
+        devBeth.advance();
+
+        System.out.println("------------");
+        System.out.println("Ranking");
+        System.out.println(bootcampBackEnd.getRanking());
+        System.out.println("------------");
+
     }
 }

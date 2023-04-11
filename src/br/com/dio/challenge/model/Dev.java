@@ -2,7 +2,7 @@ package br.com.dio.challenge.model;
 
 import java.util.*;
 
-public class Dev {
+public class Dev implements Comparable<Dev>{
     private String name;
     private Set<Content> subscribedContents = new LinkedHashSet<>();
     private Set<Content> completedContent = new LinkedHashSet<>();
@@ -61,6 +61,12 @@ public class Dev {
     }
 
     @Override
+    public String toString() {
+        return "\nDev: " + name
+                + " XP: " + totalXpCalculate() + "\n";
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -71,5 +77,12 @@ public class Dev {
     @Override
     public int hashCode() {
         return Objects.hash(name, subscribedContents, completedContent);
+    }
+
+    @Override
+    public int compareTo(Dev dev) {
+        if (this.totalXpCalculate() < dev.totalXpCalculate()) return +1;
+        else if (this.totalXpCalculate() > dev.totalXpCalculate()) return -1;
+        else return this.getName().compareTo(dev.getName());
     }
 }
